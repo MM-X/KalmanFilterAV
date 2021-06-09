@@ -1,6 +1,16 @@
 ## 1、概述
 
-这是一个针对编码器采集的**速度**的卡尔曼滤波。原汁原味的卡尔曼滤波代码参考<https://github.com/TKJElectronics/KalmanFilter>，是关于`mpu6050`之类的`imu`的滤波算法，详细的推到过程参考<http://blog.tkjelectronics.dk/2012/09/a-practical-approach-to-kalman-filter-and-how-to-implement-it/)。有关卡尔曼滤波和卡尔曼增益的详细推导过程，目前我所找到的最好的教程参考`B`站[CAN神](https://www.bilibili.com/video/BV1ez4y1X7eR) <https://www.bilibili.com/video/BV1ez4y1X7eR>
+这是一个针对编码器采集的**速度**的卡尔曼滤波。原汁原味的卡尔曼滤波代码参考:
+
+<https://github.com/TKJElectronics/KalmanFilter>，是关于`mpu6050`之类的`imu`的滤波算法
+
+详细的推到过程参考:
+
+<http://blog.tkjelectronics.dk/2012/09/a-practical-approach-to-kalman-filter-and-how-to-implement-it/>
+
+有关卡尔曼滤波和卡尔曼增益的详细推导过程，目前我所找到的最好的教程参考`B`站：
+
+[CAN神](https://www.bilibili.com/video/BV1ez4y1X7eR) <https://www.bilibili.com/video/BV1ez4y1X7eR>
 
 `kalmanfilter.ods`是用`LibreOffice`做的可视化图表，用`EXCEL`打开就行。
 
@@ -135,7 +145,7 @@ $$
 然后更新**后验状态**：
 
 $$
-\boldsymbol{\hat{x}}_{k | k} = \boldsymbol{\hat{x}}_{k | k-1} + \boldsymbol{K}_k \; \boldsymbol{\tilde{y}}_k 
+\boldsymbol{\hat{x}}_{k | k} = \boldsymbol{\hat{x}}_{k | k-1} + \boldsymbol{K}_k \; \boldsymbol{\tilde{y}}_k
 $$
 
 最后更新**后验误差协方差矩阵**`posteriori error covariance matrix`:
@@ -148,5 +158,4 @@ $$
 
 ## 3、具体公式推导
 
-
-
+![](ppp.jpg)
